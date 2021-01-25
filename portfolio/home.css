@@ -1,0 +1,388 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: Hatsch sans;
+    font-size: 3vw;
+    color: white;
+    position: relative;
+}
+nav {
+    background:  #D1CDCD;
+   width: 100%;
+   display: flex;
+   justify-content:  space-between;
+   align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding: 13px;
+    height: 61px; 
+    margin: 0;
+}
+ul li {
+    
+    font-size: 18px;
+    font-family: Roboto;
+    margin: 0 5px;
+}
+
+ul li a {
+    padding: 4px 25px;
+    display: block;
+    
+}
+
+ul li a:hover{
+    
+    border-radius: 5px;
+    background: black;
+    color: white;
+}
+
+.btn_nav{
+    margin-right: 30px;
+    font-size:  25px;
+    color:black;
+    cursor: pointer;
+    display: none;
+}
+
+.btn_nav:hover{
+    
+    color: white;
+}
+
+ul.show {
+     top: 65px;
+}
+
+
+
+
+.imagecode-back{
+    width: 100%;
+    height: 390px;
+    background-image: url(./img/laptop_code.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+.container {
+ 
+}
+
+.back_laptop{
+    width: 100%;
+    height: 390px;
+
+}
+
+.imagecode-back:before{
+    content: "";
+    width: 100%;
+    height: 390px;
+    background-color: #0F1E2E;
+    position: absolute;
+    opacity: 0.7;
+    
+}
+
+.block_perfil {
+    width: 100%;
+    
+}
+
+.img_perfil {
+    border-radius: 100%;
+    width:  310px;
+    height: 310px;
+    border: 15px solid #ffffff;
+    position: relative;
+    top: 250px;
+  
+}
+
+.container_presentation{
+    width: 100%;   
+    height: 400px;
+    background-color:  white;
+    display: flex;
+    justify-content: center;
+    
+    
+   
+}
+
+.card{
+    background-color: #ABA446;
+    display: block;
+    height: 70%;
+    width: 38%;
+    top: 180px;
+    position: relative;
+    margin-top: -2px;
+    padding: 40px 40px;
+    justify-content: center;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+   z-index: 1;
+}
+
+.description{
+    margin: auto;
+    font-family: Roboto;
+    
+    color: white;
+    font-size: 1.5vw;
+    text-align: left;
+    
+}
+
+.container_contact {
+    
+}
+.container_contact img{
+    height: 50px;
+
+}
+
+.imagework-back {
+    width: 100%;
+    height: 600px;
+    background-image: url("./img/work_space.jpg");    
+    background-size: 100% 100%;
+    
+    
+   
+}
+
+.imagework-back:before{
+    content: "";
+    width: 100%;
+    height: 600px;
+    background-color: #0F1E2E;
+    position: absolute;
+    opacity: 0.7;
+
+    
+}
+
+
+.imagework-back h1 {
+   top: 70px;
+   margin-left: 38%;
+}
+
+.imagecode-title{
+    display: flex;
+
+    width: 100%;
+    text-align: center;
+    height: 20%;
+}
+
+.imgwork-row{
+    width: 100%;
+    height: 90%;
+    border: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+
+.nino_mensaj{
+    background-color: aqua;
+    position: relative;
+    height: 20%;
+    width: 10%;
+}
+
+.classroom{
+    background: yellow;
+    position: relative;
+    height: 20%;
+    width: 10%;
+}
+.img-card{
+     width: 20%;
+     height: 70%;
+     background: azure;
+     margin-bottom: 50px;
+     position: relative;
+     margin-top: 90px;
+     transition: default;
+     box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+}
+
+.img-card:hover {
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+}
+
+.back-skill{
+    background-color: #ABA446;;
+    width: 100%;
+    height: 520px;
+}
+
+.back-contact{
+    background-color:#0F1E2E ;
+    width: 100%;
+    height: 520px;
+}
+
+@media screen and (max-width: 952px){
+    .logo{
+        font-size: 30px;
+        padding-left: 35px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+
+    .img_perfil {
+        border-radius: 100%;
+        width:  300px;
+        height: 300px;
+        border: 9px solid #ffffff;
+        position: relative;
+        top: 250px;
+      
+    }
+    .card{
+        background-color: #ABA446;
+        display: block;
+        height: 50%;
+        width: 40%;
+        top: 100px;
+        position: relative;
+        margin-top: -2px;
+        align-content:center;
+        padding: 20px 20px;
+    
+        display: flex;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+}
+
+
+@media screen and (max-width: 850px){
+    nav {
+        height: 65px;
+        z-index: 1;
+    }
+    .btn_nav{
+        display: inline-flex;
+    }
+    ul {
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 450px);
+        background: #D1CDCD ;
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+        z-index: 1;
+    }
+    
+    li {
+        margin: 30px 0 0 0;
+        line-height:  30px;
+    }
+
+    a {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .logo{
+        font-size: 25px;
+        padding-left: 35px;
+    }
+
+    
+    .img_perfil {
+        border-radius: 100%;
+        width:  200px;
+        height: 200px;
+        border: 10px solid #ffffff;
+        position: relative;
+        top: 250px;
+      
+    }
+
+    .card{
+        background-color: #ABA446;
+        display: block;
+        height: 50%;
+        width: 50%;
+        top: 100px;
+        position: relative;
+        margin-top: -2px;
+        align-content:center;
+        padding: 20px 20px;
+    
+        display: flex;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+}
+@media screen and (max-width: 850px) and (orientation: landscape){
+    li{
+        margin: 5px 0 0 0;
+    }
+    ul{
+        overflow: scroll;
+        height: calc(100% - 65px);
+    }
+    .img_perfil {
+        border-radius: 100%;
+        width:  200px;
+        height: 200px;
+        border: 10px solid #ffffff;
+        position: relative;
+        top: 250px;
+      
+    }
+    .card{
+        background-color: #ABA446;
+        display: block;
+        height: 50%;
+        width: 50%;
+        top: 100px;
+        position: relative;
+        margin-top: -2px;
+        align-content:center;
+        padding: 20px 20px;
+    
+        display: flex;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+}
+
+
+
