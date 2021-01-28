@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./home.css" media="screen" />
-    <script src="./home.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/home.css media="screen" />
+    <script src="./js/home.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"
     
 </head>
 <body>
-    
-   <nav>
+<main>
+    <nav>
 
         <div class="logo"> Logo</div>
         <ul>
             <li>
-                <a> Home</a>
+                <a  class="btn-a" href="#home"> Home</a>
             </li>
             <li>
-                <a>Professional</a> 
+                <a class="btn-a" href="#portfolio">Portfolio</a> 
             </li>    
             <li>
-                <a > Portapolio</a>
+                <a class="btn-a" href="#skill">Skill</a>
             </li>
             <li>
-                <a>Contact</a>
+                <a class="btn-a" href="#contact">Contact</a>
             </li>            
           
             
@@ -37,12 +37,14 @@
  
 
 
-<div class= "imagecode-back">
-    
+<div id="home" class= "imagecode-back">
+    <div style="left:-2px; position: absolute; margin: 50px 50px; text-align:left; width: 30%;">
+        <h1>hello my name is jason 
+            I am designer UX/UI deveplopment Frontend</h1></div>
+    <div class= "container">
        
-        <div class= "container">
-            <img  class="img_perfil" src="./img/photo_perfil.jpg">
-        </div>
+        <img  class="img_perfil" src="./img/photo_perfil.jpg">
+    </div>
     
 </div>
 
@@ -73,9 +75,9 @@
      </div>
     </div> 
 </div>
-<div class= "imagework-back">
+<div  id="portfolio" class= "imagework-back">
     <div class="imagework-title">
-        <h1>01 PROTAPOLIO</h1>
+        <h1>01 PORTFOLIO</h1>
     </div >
     <div class="imgwork-row">
         
@@ -92,13 +94,231 @@
         </div>
  </div>
 
- <div class="back-skill">
+ <div id="skill" class="back-skill" >
+    <div> 
+        <h1>02 SKILLS</h1>
+    </div>
+    <div class="container-skills" id="skills">
+        <div class="container-skill">  
+            <li>
+                
+                <div class="skill" onmouseover="contador()">
+                    <div class="name">   
+                        <h3>
+                            Angular
+                        </h3>
+                    </div>
+                    <div class="counter" data-target="60">0
+                    </div>
+                    <h3>%</h3>
+                    <progress value="0" max="100"  id="angular"></progress>
+                </div>
+            
+            </li>
+            <li>
+                <div class="skill" onmouseover="contador()">
+                    <div class="name">   
+                        <h3>
+                            Laravel
+                        </h3>
+                    </div>
+                    <div class="counter" data-target="50">0
+                    </div>
+                    <h3>%</h3>
+                    <progress value="0" max="100"  id="laravel"></progress>
+                </div>
+               
+            </li>
+            <li>
+                <div class="skill" onmouseover="contador()">
+                    <div class="name">   
+                        <h3>
+                            JavaScript
+                        </h3>
+                    </div>
+                    <div class="counter" data-target="40">0
+                    </div>
+                    <h3>%</h3>
+                    <progress value="0" max="100"  id="javascript"></progress>
+                </div>
+            </li>
+            <li>
+                <div class="skill" onmouseover="contador()">
+                    <div class="name">   
+                        <h3>
+                            Java
+                        </h3>
+                    </div>
+                    <div class="counter" data-target="65">0
+                    </div>
+                    <h3>%</h3>
+                    <progress value="0" max="100"  id="java"></progress>
+                </div>
+               
+            </li>
+            <li>
+                <div class="skill" onmouseover="contador()">
+                    <div class="name">   
+                        <h3>
+                            Python
+                        </h3>
+                    </div>
+                    <div class="counter" data-target="40">0
+                    </div>
+                    <h3>%</h3>
+                    <progress value="0" max="100"  id="python"></progress>
+                </div>
+               
+            </li>
+            <li>
+                <div class="skill" onmouseover="contador()">
+                    <div class="name">   
+                        <h3>
+                            C#
+                        </h3>
+                    </div>
+                    <div class="counter" data-target="40">0
+                    </div>
+                    <h3>%</h3>
+                    <progress value="0" max="100"  id="cshart"></progress>
+                </div>
+               
+            </li>
+            <li>
+               
+                <div class="skill" onmouseover="contador()">
+                    <div class="name">   
+                        <h3>
+                            Php
+                        </h3>
+                    </div>
+                    <div class="counter" data-target="45">0
+                    </div>
+                    <h3>%</h3>
+                    <progress value="0" max="100"  id="php"></progress>
+                </div>
 
+            </li>
+            </li>
+            
+            <li>
+        
+            <div class="skill" onmouseover="contador()">
+                <div class="name">   
+                    <h3>
+                        Asp.net
+                    </h3>  
+                </div>
+                <div class="counter" data-target="40">0
+                </div>
+                <h3>%</h3>
+                <progress value="0" max="100"  id="asp"></progress>
+            </div>
+            
+        </li>
+        </div>
+        <div class="container-skill">
+            <li>
+                <div class="skill" onmouseover="contador()">
+                    <div class="name">   
+                        <h3>
+                            Pothosop
+                        </h3>
+                    </div>
+                    <div class="counter" data-target="60">0
+                    </div>
+                    <h3>%</h3>
+                    <progress value="0" max="100"  id="pothosop"></progress>
+                </div>
+            </li>
+            <li>
+                <div class="skill" onmouseover="contador()">
+                    <div class="name">   
+                        <h3>
+                            Illustrator
+                        </h3>
+                    </div>
+                    <div class="counter" data-target="50">0
+                    </div>
+                    <h3>%</h3>
+                    <progress value="0" max="100"  id="illustrator"></progress>
+                </div>
+               
+            </li>
+            <li>
+            
+                <div class="skill" onmouseover="contador()">
+                    <div class="name">   
+                        <h3>
+                            AdobeXd
+                        </h3>
+                    </div>
+                    <div class="counter" data-target="50">0
+                    </div>
+                    <h3>%</h3>
+                    <progress value="0" max="100"  id="adobexd"></progress>
+                </div>
+            </li>
+            <li>
+                <div class="skill" onmouseover="contador()">
+                    <div class="name">   
+                        <h3>
+                            Ingles
+                        </h3> 
+                    </div>
+                    <div class="counter" data-target="45">0
+                    </div>
+                    <h3>%</h3>
+                    <progress value="0" max="100"  id="ingles"></progress>
+                </div>
+            </li>
+        </div>
+    </div>
  </div>
 
- <div class="back-contact">
-
+ <div id="contact" class="back-contact">
+    <div> 
+        <h1>03 CONTACT</h1>
+    </div>
+       
+        <div class="form-container">
+            <form  class="form-contact" id="formulario"  action="">
+              
+                    <div class="form-group" id="form-gmail">    
+                            <label class="form-label" >Gmail</label>
+                        <div class="group-input">        
+                            <input  class="form-input" type="text" name="gmail" id="gmail">
+                            <i class="formulario__validacion-estado fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="form-group" id="form-name">
+                        <label class="form-label">Name </label>
+                        <div class="group-input">
+                            <input class="form-input" type="text" name="name" id="name">
+                            <i class="formulario__validacion-estado fas fa-check-circle" ></i>
+                        </div>
+                    </div>
+                    <div class="form-group" id="form-telephone">    
+                        <label class="form-label" >Telefono</label>
+                        <div class="group-input">    
+                            <input class="form-input" type="text" name="telephone">
+                            <i class="formulario__validacion-estado fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="form-group"> 
+                        <label class="form-label">Mensaje</label>
+                        
+                        <Textarea placeholder="Escribe aqui" name="">
+                    
+                        </Textarea>
+                    </div>
+                        <button type="submit"  class="boton">Send </button>
+                
+            </form>
+        </div>
+    
  </div>
-</div>
+</main>
+ <script src="./js/validators.js" ></script>
 </body>
 </html>
