@@ -7,8 +7,10 @@
     <link rel="stylesheet" type="text/css" href="./css/home.css" media="screen" />
     <script src="./js/home.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"
-    
-</head>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 <body>
 <main>
     <nav>
@@ -80,17 +82,45 @@
         <h1>01 PORTFOLIO</h1>
     </div >
     <div class="imgwork-row">
-        
         <div class="img-card">
-
+            <div class="card-n">
+                <div class="frond">
+                    <h1>delante</h1>
+                </div>
+                <div class="back">
+                    <h1>detras</h1>
+                </div>
+            </div>
         </div>
-        <div class="classromm img-card">
-
+        <div class="img-card">
+            <div class="card-n">
+                <div class="frond">
+                    <h1>delante</h1>
+                </div>
+                <div class="back">
+                    <h1>detras</h1>
+                </div>
+            </div>
         </div>
-        <div class="dental_app img-card">
-
+        <div class="img-card">
+            <div class="card-n">
+                <div class="frond">
+                    <h1>delante</h1>
+                </div>
+                <div class="back">
+                    <h1>detras</h1>
+                </div>
+            </div>
         </div>
-        <div class="tall_simul img-card">
+        <div class="img-card">
+            <div class="card-n">
+                <div class="frond">
+                    <h1>delante</h1>
+                </div>
+                <div class="back">
+                    <h1>detras</h1>
+                </div>
+            </div>
         </div>
  </div>
 
@@ -282,43 +312,66 @@
     </div>
        
         <div class="form-container">
-            <form  class="form-contact" id="formulario"  action="">
+            <form action="" class="formulario" id="formulario">
+			
+               
+                <div class="formulario__grupo" id="grupo__nombre">
+                    <label for="nombre" class="formulario__label">Nombre</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+                </div>
+    
+                <div class="formulario__grupo" id="grupo__correo">
+                    <label for="correo" class="formulario__label">Correo Electrónico</label>
+                    <div class="formulario__grupo-input">
+                        <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                </div>
+    
               
-                    <div class="form-group" id="form-gmail">    
-                            <label class="form-label" >Gmail</label>
-                        <div class="group-input">        
-                            <input  class="form-input" type="text" name="gmail" id="gmail">
-                            <i class="formulario__validacion-estado fas fa-check-circle"></i>
-                        </div>
+                <div class="formulario__grupo" id="grupo__telefono">
+                    <label for="telefono" class="formulario__label">Teléfono</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
-                    <div class="form-group" id="form-name">
-                        <label class="form-label">Name </label>
-                        <div class="group-input">
-                            <input class="form-input" type="text" name="name" id="name">
-                            <i class="formulario__validacion-estado fas fa-check-circle" ></i>
-                        </div>
-                    </div>
-                    <div class="form-group" id="form-telephone">    
-                        <label class="form-label" >Telefono</label>
-                        <div class="group-input">    
-                            <input class="form-input" type="text" name="telephone">
-                            <i class="formulario__validacion-estado fas fa-check-circle"></i>
-                        </div>
-                    </div>
-                    <div class="form-group"> 
-                        <label class="form-label">Mensaje</label>
-                        
-                        <Textarea placeholder="Escribe aqui" name="">
-                    
-                        </Textarea>
-                    </div>
-                        <button type="submit"  class="boton">Send </button>
-                
+                    <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+                </div>
+    
+    
+                <div class="formulario__grupo" id="grupo__telefono">
+                    <label for="telefono" class="formulario__label">Mensaje</label>
+                    <textarea id="mensaje"></textarea>
+                </div>
+    
+    
+                <div class="formulario__mensaje" id="formulario__mensaje">
+                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                </div>
+    
+                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                    <button  type="submit" class="formulario__btn">Enviar</button>
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+                </div>
             </form>
+            <div class="modal-container" id="modal-container">
+                <div class="modal">
+                   
+                </div>
+            </div>
         </div>
+    
+    
     
  </div>
 </main>
  <script src="./js/validators.js" ></script>
+ <script src="https://smtpjs.com/v3/smtp.js"></script> 
+ <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>
