@@ -14,7 +14,7 @@ width: 100%;
 }
 
 h1 {
-    font-family: Hatsch sans;
+    font-family: 'Hatsch sans','Black Han Sans';
     font-size: 3vw;
     color: white;
     position: relative;
@@ -334,6 +334,10 @@ textarea{
     list-style-type: none;
 }
 
+.logo{
+    
+    padding-left: 46px;
+}
 
 @media screen and (max-width: 952px){
     .logo{
@@ -355,7 +359,7 @@ textarea{
       
     }
     .card{
-        background-color: #ABA446;
+        background-color:#b4aaa0;
         display: block;
         height: 50%;
         width: 40%;
@@ -403,7 +407,10 @@ textarea{
         transition: all .4s;
         flex-direction: column;
         z-index: 1;
+        opacity: 1;
     }
+
+    
     
     li {
         margin: 30px 0 0 0;
@@ -432,7 +439,7 @@ textarea{
     }
 
     .card{
-        background-color: #ABA446;
+        background-color:#b4aaa0;
        
         height: 50%;
         width: 50%;
@@ -469,7 +476,7 @@ textarea{
     .container_presentation{
         width: 100%;   
         height: 80%;
-        background-color:  white;
+       
         display: flex;
         justify-content: center;
         
@@ -511,7 +518,7 @@ textarea{
     .img-card{
         width: 80%;
         height: 15%;
-        background: azure;
+        
         margin-bottom: 10px;
         position: relative;
         margin-top: 20%;
@@ -539,7 +546,7 @@ textarea{
     
 
     .back-skill{
-        background-color: #ABA446;;
+        background-color:  #1c1A18;
         width: 100%;
         height: 900px;
     }
@@ -549,6 +556,27 @@ textarea{
         margin: 5% 5%;
         color: white;
         font-family: Roboto;
+    }
+    .modal{
+        background-color: white;
+        width: 60%;
+        height: 400px;
+        padding: 10%  10%;
+        border-radius: 10px;
+        background-color: #8cc6dd;
+        background-image: url("./img/undraw_envelope_n8lc.svg");
+        background-size: 100%;
+    
+    }
+    .presentation{
+        left:-2px; 
+        position: absolute; 
+        margin: 50px 50px; 
+        text-align:left; 
+        width: 30%;
+        font-size: 2vw;
+       
+       
     }
 }
 @media screen and (max-width: 850px) and (orientation: landscape){
@@ -588,7 +616,7 @@ textarea{
     .img-card{
         width: 40%;
         height: 40%;
-        background: azure;
+        
         margin-bottom: 50px;
         position: relative;
         margin-top: 90px;
@@ -651,7 +679,6 @@ textarea{
     width: 100%;
     height: 100%;
     position: relative;
-    background-color: #1c1A18;
     transform-style: preserve-3d;
     transition: .7s ease;
     box-shadow: rgb(143, 132, 132);
@@ -667,8 +694,15 @@ textarea{
     -webkit-backface-visibility: hidden;
 }
 
+.frond{
+    background-image: url('./img/undraw_envelope_n8lc.svg');
+    background-size: 100% 100%;
+}
 .back{
     transform: rotateY(180deg);
+    text-align: center;
+    padding: 10% 10%;
+    background-color: #1c1A18;
     
 }
 
@@ -867,7 +901,7 @@ textarea:focus{
     height: 400px;
     padding: 10%  10%;
     border-radius: 10px;
-    background-color: #1c1c1c;
+    background-color: #8cc6dd;
     background-image: url("./img/undraw_envelope_n8lc.svg");
     background-size: cover;
 
@@ -876,4 +910,15 @@ textarea:focus{
 .show{
     pointer-events: auto;
     opacity: 1;
+}
+
+.presentation{
+    left:-2px; 
+    position: absolute; 
+    margin: 50px 50px; 
+    text-align:left; 
+    width: 20%;
+   
+   
+   
 }

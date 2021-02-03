@@ -1,16 +1,57 @@
 addEventListener('DOMContentLoaded',() =>{
-    const btn_nav = document.querySelector('.btn_nav')
-    
+    const btn_nav = document.querySelector('.btn_nav');
+    const btn_ah   = document.getElementById('btn-h');
+    const btn_as   = document.getElementById('btn-as');
+    const btn_ac   = document.getElementById('btn-ac');
+    const btn_ap   = document.getElementById('btn-ap');
+
     if(btn_nav) {
+        
         btn_nav.addEventListener('click', () =>{
-            const menu_items = document.querySelector('ul')
+            
+          const menu_items = document.querySelector('ul')
             menu_items.classList.toggle('show')
+
+
             
         })
-    }
+        btn_ah.addEventListener('click', () =>{
+          console.log("hola mundo");
+          const menu_items = document.querySelector('ul')
+            menu_items.classList.toggle('show')
+          
+        
+        })
+        btn_ap.addEventListener('click', () =>{
+          console.log("hola mundo");
+          const menu_items = document.querySelector('ul')
+            menu_items.classList.toggle('show')
+           
+        
+        })
+        btn_ac.addEventListener('click', () =>{
+          console.log("hola mundo");
+          const menu_items = document.querySelector('ul')
+            menu_items.classList.toggle('show')
+          
+        
+        })
+        btn_as.addEventListener('click', () =>{
+          console.log("hola mundo");
+          const menu_items = document.querySelector('ul')
+            menu_items.classList.toggle('show')
+          
+        
+        })
     
-}
-)
+    }
+
+    
+        
+      
+          
+     
+})
 
 
 window.addEventListener('scroll', function()
