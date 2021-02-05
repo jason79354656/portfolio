@@ -145,3 +145,15 @@ function contador() {
   } else {
   counter.innerText = target;}};
   updateCount();});}
+
+  function iniciarMap(){
+    var coord = {lat:-17.387929 ,lng:-66.190699 };
+    var map = new google.maps.Map(document.getElementById('map'),{
+      zoom: 8,
+      center: coord
+    });
+    var marker = new google.maps.Marker({
+      position: coord,
+      map: map
+    });
+}
