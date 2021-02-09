@@ -89,10 +89,10 @@ function recharge(){
     if( br_java.value <= 65 ){
       br_java.value += 5;
     }
-    if( br_l.value <= 50  ){
+    if( br_l.value <= 55  ){
       br_l.value += 5;
     }
-    if( br_javs.value <= 40 ){
+    if( br_javs.value <= 55 ){
       br_javs.value += 5;
     }
     if( br_java <= 90 ){

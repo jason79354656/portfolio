@@ -9,8 +9,24 @@ html{
     scroll-behavior: smooth;
 }
 
-progress{
-width: 100%;
+progress[value]{
+    -webkit-appearence: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    border:none;
+    border-radius: 50px;
+}
+
+progress::-webkit-progress-value {
+    background: #0075FF;
+    border-radius : 20px;  
+}
+
+progress::-webkit-progress-bar {
+    background-color:#D8D8D8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; /*esta sombra es para simular el borde que he aplicado arriba para Mozilla*/
+    border-radius : 20px ;         
 }
 
 h1 {
@@ -18,48 +34,77 @@ h1 {
     font-size: 3vw;
     color: white;
     position: relative;
-   
-   
-}
-nav {
-    background:#f0ecec;
-   width: 100%;
-   display: flex;
-   justify-content:  space-between;
-   align-items: center;
 }
 
-ul {
+nav {
+    background:#f0ecec;
+    width: 100%;
+   display: flex;
+   justify-content:  space-between;
+   
+}
+
+.menu{
+    width:  40%;
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
     display: flex;
     list-style: none;
     padding: 13px;
     height: 61px; 
     margin: 0;
+    letter-spacing: 1px;
 }
-ul li {
-    
+
+.main-menu{
+    position: relative;
     font-size: 18px;
     font-family: Roboto;
-    margin: 0 5px;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-ul li a {
-    padding: 4px 25px;
+.main-menu::before,
+.main-menu::after{
+    content: "";
     display: block;
-    text-decoration: none;
-    color: black;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background:white;
+    transition: transform 0.6s;
 }
 
-ul li a:hover{
-    
-    border-radius: 5px;
-    background: black;
-    color: white;
+.main-menu::before{
+    top: 5px;
+    transform: translateX(-100%);
+}
+
+.main-menu::after{
+    bottom: 5px;
+    transform: translateX(100%);
+}
+
+.main-menu:hover::before,
+.main-menu:hover::after{
+    transform: translateX(0);
 }
 
 .btn-a{
-    cursor: pointer;
+    
+    text-decoration: none;
+    color: black;
+   transition: color 0.5s;
 }
+
+.btn-a:hover{
+    border-radius: 5px;
+    color: white;
+}
+
 .btn_nav{
     margin-right: 30px;
     font-size:  25px;
@@ -77,7 +122,19 @@ ul.show {
      top: 65px;
 }
 
-
+.container-title-contact{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 10%; 
+    padding-top: 5%;
+}
+.title-contact{
+    font-family: 'Hatsch sans','Black Han Sans';
+        font-size: 2.4vw;
+        color: white;
+        position: relative;
+}
 
 
 .imagecode-back{
@@ -123,8 +180,78 @@ ul.show {
     border: 15px solid #ffffff;
     position: relative;
     top: 250px;
-  
+    cursor: pointer;
+   
 }
+
+
+.logo{
+    display: flex;
+    margin-left: 46px;
+    overflow: hidden;
+    justify-content: center;
+    position: relative;
+}
+/**
+.logo::after,
+.logo::before{
+    content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transition: transform 0.4s;
+}
+
+.logo::before{
+    top: 0;
+    right: 0;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    transform: translateX(100%);
+}
+
+.logo::after{
+    top: 0;
+  left: 0;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  transform: translateX(-100%);
+}
+
+
+.logo:hover::before {
+    transform: translateX(10%);
+  }
+  
+  .logo:hover::after {
+    transform: translateX(-10%);
+  }
+
+**/
+  .logo-a{
+    position: absolute;
+    font-size: 18px;
+    font-family: Roboto;
+    padding: 0.5rem 0;
+    line-height: 2;
+    right: 50%;
+    z-index: 10;
+    transform: translateX(-10%) scale(0);
+    transition: transform 0.4s;
+}
+
+
+.logo-link:hover .logo-a{
+    transform: translateX(-50%) scale(2);
+    
+}
+
+
+.logo-link:hover{
+    opacity: 0.1;
+}
+
+
 
 .container_presentation{
     width: 100%;   
@@ -176,7 +303,7 @@ ul.show {
 
 .imagework-back {
     width: 100%;
-    height: 1000px;
+    height: 1100px;
     background-image: url("./img/work_space.jpg");    
     background-size: 100% 100%;
     
@@ -187,7 +314,7 @@ ul.show {
 .imagework-back:before{
     content: "";
     width: 100%;
-    height: 1000px;
+    height: 1100px;
     background-color: #0F1E2E;
     position: absolute;
     opacity: 0.7;
@@ -255,7 +382,7 @@ ul.show {
 .back-skill{
     background-color: #1c1A18;
     width: 100%;
-    height: 580px;
+    height: 600px;
 }
 
 .back-contact{
@@ -277,14 +404,14 @@ ul.show {
 
 
 .form-container{
-    
+    margin-top: 5%;
     width: 100%;
     height: 80%;
     width: 100%;
     height: 73%;
     justify-content: center;
     display: flex;
-    margin-top: 4%;
+   
 }
 
 .form-contact{
@@ -337,21 +464,113 @@ textarea{
     list-style-type: none;
 }
 
-.logo{
+
+.name-title::after{
     
-    padding-left: 46px;
+    content: '';
+    font-size: 2.5vw;
+    animation: animate 5s infinite;
+    
 }
+
+@keyframes animate{
+   0%{
+        font-size: 2.5vw;
+        content: 'D';
+   }
+
+   5%{
+        font-size: 2.5vw;
+        content: 'De';
+   }
+
+    10%{
+    font-size: 2.5vw;
+    content: 'Des';
+    }
+   
+
+   15%{
+    font-size: 2.5vw;
+    content: 'Desi';        
+
+   }
+
+   20%{
+    font-size: 2.5vw;
+    content: 'Desig';        
+
+   }
+
+   25%{
+        font-size: 2.5vw;
+        content: 'Design'; 
+   }
+
+    30%{
+       font-size: 2.5vw;
+       content: 'Designe'; 
+    }
+    35%{
+        font-size: 2.5vw;
+        content: 'Designer'; 
+     }
+   
+     40%{
+    font-size: 2.5vw;
+    content: 'Designer UX/UI'; 
+    }   
+    45%{
+        font-size: 2.5vw;
+        content: 'Designer UX/UI D'; 
+    }  
+    50%{
+        font-size: 2.5vw;
+        content: 'Designer UX/UI De'; 
+    }
+    55%{
+        font-size: 2.5vw;
+        content: 'Designer UX/UI Dev'; 
+    }
+    60%{
+        font-size: 2.5vw;
+        content: 'Designer UX/UI Devel'; 
+    } 
+    65%{
+        font-size: 2.5vw;
+        content: 'Designer UX/UI Develo'; 
+    }     
+    70%{
+        font-size: 2.5vw;
+        content: 'Designer UX/UI Develop'; 
+    }     
+    75%{
+        font-size: 2.5vw;
+        content: 'Designer UX/UI Develope'; 
+    }
+    80%{
+        font-size: 2.5vw;
+        content: 'Designer UX/UI Developer'; 
+    }     
+    85%{
+        font-size: 2.5vw;
+        content: 'Designer UX/UI Developer Frontend'; 
+    }     
+    100%{
+        font-size: 2.5vw;
+        content: 'Designer UX/UI Developer Frontend'; 
+    }                
+}
+
 
 @media screen and (max-width: 952px){
     .logo{
         font-size: 30px;
         padding-left: 35px;
     }
-
     a {
         font-size: 16px;
     }
-
     .img_perfil {
         border-radius: 100%;
         width:  300px;
@@ -359,7 +578,6 @@ textarea{
         border: 9px solid #ffffff;
         position: relative;
         top: 250px;
-      
     }
     .card{
         background-color:#b4aaa0;
@@ -406,10 +624,13 @@ textarea{
     }
     .btn_nav{
         display: inline-flex;
+        padding: 15px 10px;
     }
-    ul {
+
+
+    .menu {
         position: fixed;
-        width: 100vw;
+        width: 100%;
         height: calc(100% - 450px);
         background: #D1CDCD ;
         top: -100vh;
@@ -417,15 +638,46 @@ textarea{
         transition: all .4s;
         flex-direction: column;
         z-index: 1;
-        opacity: 1;
+        
+        cursor: pointer;
+        
     }
 
     
-    
-    li {
-        margin: 30px 0 0 0;
+    .main-menu {
+        padding: 24px 24px;
         line-height:  30px;
+        margin: 0px 5px;
+        overflow: hidden;
     }
+
+    
+    .main-menu::before,
+    .main-menu::after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background:white;
+        transition: transform 0.6s;
+    }
+    
+    .main-menu::before{
+        top: 0.2px;
+        transform: translateX(-100%);
+    }
+    
+    .main-menu::after{
+        bottom: 0.2px;
+        transform: translateX(100%);
+    }
+    .main-menu:hover::before,
+    .main-menu:hover::after{
+        transform: translateX(0);
+    }
+
+
 
     a {
         font-size: 20px;
@@ -434,7 +686,7 @@ textarea{
 
     .logo{
         font-size: 25px;
-        padding-left: 35px;
+        margin-left: 15px;
     }
 
     
@@ -494,11 +746,8 @@ textarea{
 
     
     .form-container{
-        
         width: 100%;
         height: 80%;
-        width: 100%;
-        height: 73%;
         justify-content: center;
         display: flex;
         margin-top: 4%;
@@ -506,7 +755,7 @@ textarea{
     }
     .form-contact{
         margin: auto;
-        width:  80%;
+        width:  100%;
         height: 80%;
         background: #b3aeae;
         padding: 10px 10px;
@@ -515,6 +764,13 @@ textarea{
         font-family: Roboto;
     }
      
+    .title-contact{
+        font-family: 'Hatsch sans','Black Han Sans';
+        font-size: 9vw;
+        color: white;
+        position: relative;
+        top: 35px;
+    }
     
     
     h1 {
@@ -545,7 +801,7 @@ textarea{
     .imagework-back:before{
         content: "";
         width: 100%;
-        height: 2300px;
+        height: 2395px;
         background-color: #0F1E2E;
         position: absolute;
         opacity: 0.7;
@@ -564,7 +820,7 @@ textarea{
     .container-skill{
         width: 80%;
         margin: 5% 5%;
-       
+        margin-top: 70px;
         font-family: Roboto;
     }
     .modal{
@@ -584,7 +840,7 @@ textarea{
         margin: 50px 50px; 
         text-align:left; 
         width: 30%;
-        font-size: 2vw;
+        font-size: 3vw;
        
        
     }
@@ -597,6 +853,104 @@ textarea{
     height: 20%;
     
 }
+
+.name-title::after{
+    
+    content: '';
+    font-size: 5.5vw;
+    animation: animate 5s infinite;
+    
+}
+
+@keyframes animate{
+   0%{
+        font-size: 5.5vw;
+        content: 'D';
+   }
+
+   5%{
+        font-size: 5.5vw;
+        content: 'De';
+   }
+
+    10%{
+    font-size: 5.5vw;
+    content: 'Des';
+    }
+   
+
+   15%{
+    font-size: 5.5vw;
+    content: 'Desi';        
+
+   }
+
+   20%{
+    font-size: 5.5vw;
+    content: 'Desig';        
+
+   }
+
+   25%{
+        font-size: 5.5vw;
+        content: 'Design'; 
+   }
+
+    30%{
+       font-size: 5.5vw;
+       content: 'Designe'; 
+    }
+    35%{
+        font-size: 5.5vw;
+        content: 'Designer'; 
+     }
+   
+     40%{
+    font-size: 5.5vw;
+    content: 'Designer UX/UI'; 
+    }   
+    45%{
+        font-size: 5.5vw;
+        content: 'Designer UX/UI D'; 
+    }  
+    50%{
+        font-size: 5.5vw;
+        content: 'Designer UX/UI De'; 
+    }
+    55%{
+        font-size: 5.5vw;
+        content: 'Designer UX/UI Dev'; 
+    }
+    60%{
+        font-size: 5.5vw;
+        content: 'Designer UX/UI Devel'; 
+    } 
+    65%{
+        font-size: 5.5vw;
+        content: 'Designer UX/UI Develo'; 
+    }     
+    70%{
+        font-size: 5.5vw;
+        content: 'Designer UX/UI Develop'; 
+    }     
+    75%{
+        font-size: 5.5vw;
+        content: 'Designer UX/UI Develope'; 
+    }
+    80%{
+        font-size: 5.5vw;
+        content: 'Designer UX/UI Developer'; 
+    }     
+    85%{
+        font-size: 5.5vw;
+        content: 'Designer UX/UI Developer Frontend'; 
+    }     
+    100%{
+        font-size: 5.5vw;
+        content: 'Designer UX/UI Developer Frontend'; 
+    }                
+}
+
 }
 @media screen and (max-width: 850px) and (orientation: landscape){
     li{
@@ -744,7 +1098,7 @@ textarea{
     box-sizing: border-box;
     border-radius: 1px;
     font-family: Roboto;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .formulario__label {
@@ -843,18 +1197,36 @@ textarea:focus{
 	height: 45px;
 	line-height: 45px;
 	width: 30%;
-	background: #000;
-	color: #fff;
+	color: white;
+	background-color: #0c0c0c;
 	font-weight: bold;
 	border: none;
 	border-radius: 3px;
 	cursor: pointer;
 	transition: .1s ease all;
+    position: relative;
 }
+
+
 
 .formulario__btn:hover {
 	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
 }
+
+
+.formulario__btn::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    background: #0c0c0c;
+    z-index: -1;
+}
+
+
 
 .formulario__mensaje-exito {
 	font-size: 14px;
@@ -940,9 +1312,7 @@ textarea:focus{
     margin: 50px 50px; 
     text-align:left; 
     width: 20%;
-   
-   
-   
+
 }
 
 .content{
@@ -951,8 +1321,11 @@ textarea:focus{
     font-family:roboto;
 }
 
+
+
 .code{
     text-decoration:none;
     font-family: roboto;
     color:#0075FF ;
 }
+
