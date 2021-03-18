@@ -25,7 +25,7 @@ progress::-webkit-progress-value {
 
 progress::-webkit-progress-bar {
     background-color:#D8D8D8;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; /*esta sombra es para simular el borde que he aplicado arriba para Mozilla*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;  
     border-radius : 20px ;         
 }
 
@@ -172,16 +172,48 @@ ul.show {
     width: 100%;
     
 }
-
-.img_perfil {
+.container-img{
     border-radius: 100%;
     width:  310px;
     height: 310px;
     border: 15px solid #ffffff;
     position: relative;
     top: 250px;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.img_perfil {
+    border-radius: 100%;
+    width:  100%;
+    height: 100%;
+    position: relative;
     cursor: pointer;
+    transition: all 500ms ease-out;
+}
+
+
+.capa{
    
+   position:absolute;
+ 
+   transition: all 500ms ease-out;
+   opacity: 0;
+   visibility: hidden; 
+
+}
+.capa p {
+    font-size: 15px;
+    font-family: roboto;
+    color: white;
+}
+
+.container-img:hover > .capa{
+    opacity: 1;
+    visibility: visible;
 }
 
 
@@ -192,42 +224,7 @@ ul.show {
     justify-content: center;
     position: relative;
 }
-/**
-.logo::after,
-.logo::before{
-    content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  transition: transform 0.4s;
-}
 
-.logo::before{
-    top: 0;
-    right: 0;
-    clip-path: polygon(100% 0, 0 0, 100% 100%);
-    transform: translateX(100%);
-}
-
-.logo::after{
-    top: 0;
-  left: 0;
-  clip-path: polygon(0 0, 0 100%, 100% 100%);
-  transform: translateX(-100%);
-}
-
-
-.logo:hover::before {
-    transform: translateX(10%);
-  }
-  
-  .logo:hover::after {
-    transform: translateX(-10%);
-  }
-
-**/
   .logo-a{
     position: absolute;
     font-size: 18px;
@@ -571,13 +568,48 @@ textarea{
     a {
         font-size: 16px;
     }
-    .img_perfil {
+    .container-img{
         border-radius: 100%;
-        width:  300px;
-        height: 300px;
-        border: 9px solid #ffffff;
+        width:  310px;
+        height: 310px;
+        border: 15px solid #ffffff;
         position: relative;
         top: 250px;
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .img_perfil {
+        border-radius: 100%;
+        width:  100%;
+        height: 100%;
+        position: relative;
+        cursor: pointer;
+        transition: all 500ms ease-out;
+    }
+    
+    
+    .capa{
+       
+       position:absolute;
+     
+       transition: all 500ms ease-out;
+       opacity: 0;
+       visibility: hidden; 
+    
+    }
+    .capa p {
+        font-size: 15px;
+        font-family: roboto;
+        color: white;
+    }
+    
+    .container-img:hover > .capa{
+        opacity: 1;
+        visibility: visible;
     }
     .card{
         background-color:#b4aaa0;
@@ -652,25 +684,16 @@ textarea{
     }
 
     
-    .main-menu::before,
-    .main-menu::after{
-        content: "";
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background:white;
-        transition: transform 0.6s;
-    }
+    
     
     .main-menu::before{
-        top: 0.2px;
-        transform: translateX(-100%);
+        visibility: 0;
+        opacity: 0;
     }
     
     .main-menu::after{
-        bottom: 0.2px;
-        transform: translateX(100%);
+        visibility: 0;
+        opacity: 0;
     }
     .main-menu:hover::before,
     .main-menu:hover::after{
@@ -690,14 +713,47 @@ textarea{
     }
 
     
-    .img_perfil {
+    .container-img{
         border-radius: 100%;
         width:  150px;
         height: 150px;
         border: 10px solid #ffffff;
         position: relative;
         top: 240px;
-      
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .img_perfil {
+        width:  100%;
+        height: 100%;
+        position: relative;
+        cursor: pointer;
+        transition: all 500ms ease-out;
+    }
+    
+    
+    .capa{
+       
+       position:absolute;
+     
+       transition: all 500ms ease-out;
+       opacity: 0;
+       visibility: hidden; 
+    
+    }
+    .capa p {
+        font-size: 15px;
+        font-family: roboto;
+        color: white;
+    }
+    
+    .container-img:hover > .capa{
+        opacity: 1;
+        visibility: visible;
     }
 
     .card{
